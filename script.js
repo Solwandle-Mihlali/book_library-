@@ -1,30 +1,39 @@
-let form = document.getElementById("form");
-let addBtn = document.getElementById("addBtn");
-let toggle = document.getElementById("toggle")
+let author = prompt("author?");
+let title = prompt("title?");
+let pages = prompt("number of pages?")
+let read = prompt("have you read the book?")
 
-let author = document.getElementById("author");
-let authorName = document.querySelectorAll("#author").value;
+let authorConf = document.getElementById('author"');
 
-let confirmBtn = document.getElementById("confirmBtn");
-confirmBtn.addEventListener("click",display);
+let library = [];
 
-function display(){
+function Book(author,title,pages,read){ 
+   
+    this.author = author,
+    this.title = title,
+    this.pages = pages;
+    this.read = read;
 
-    console.log("heloo" + authorName)
+}
+
+function addBookToLibrary(){
+
+    library[0] = author;
+     library[1]= title;
+    library[2] = pages;
+
+   
 }
 
 
-form.style.display = "none"
-toggle.style.display = "none"
-addBtn.addEventListener('click',showForm);
 
 
-function showForm(){
-  form.style.display ="";
-  toggle.style.display = "";
-}
 
-let bookLibrary = []
+
+
+
+
+
 
 
 
