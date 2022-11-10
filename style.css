@@ -1,108 +1,173 @@
 *{
+    padding:0;
     margin:0;
-    padding: 0;
-    transition: all 4s;
+    transition: all 0.4s;
 }
+
 body{
 
     width: 100%;
     min-height: 100vh;
-    background: white;
+    background: rgba(160, 160, 160, 0.253);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: baseline;
-   
+    justify-content: space-around;
+    background-image: url('img/Move_IT_LOGO-removebg-preview.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}   
+
+.navbar{
+    
+    display: grid;
+    grid-template-columns: repeat(100,auto);
+    grid-template-rows: repeat(100,auto);
+    width: 95%;
+    min-height: 15vh;
+    background: white;
+    position: absolute;
+    top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0.8px 0.8px 10px black;
 }
 
-.form{
-  width: 30%;
-  height: 80vh;
-  box-shadow: 1px 1px 10px black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  position: relative;
- 
+.navbar .logo{
+
+    background-image: url('img/Move_IT_LOGO-removebg-preview.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-row: 1/99;
+    grid-column: 2/20;
+    animation: 3s ease-in 1;
+    
 }
 
 @keyframes slide {
 
     from{
-        opacity:0;
+        grid-column: 0/0;
     }
-    
+    to{
+        grid-column: 2/20;
+    }
+
 }
 
-.form div{
+.navbar .logo::after{
 
-    width: 60%;
-    height: 5vh;
-    border: solid grey 1px;
+    content: "(LIBRARY)";
+    position: absolute;
+    left:17%;
+    top: 57%;
+    text-transform: capitalize;
+    color: rgb(85, 85, 84);
+    font-size: 16px;
 }
 
-.form button{
+.navbar ul{
 
-    height: 5vh;
-    width: 25%;
-    background: rgb(67, 67, 165);
-    border: none;
-    border-radius: 10px;
-    font-size: 12px;
-    color: white;
-}
-.form button a{
-    color: white;
-}
-.form button a:visited{
-    color: white;
-}
-
-nav{
-    background: rgb(67, 67, 165);
-    width: 100%;
-    height: 15vh;
-    box-shadow: 1px 0px 10px black;
+  
+    grid-column: 30/80;
+    grid-row: 30/90;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(100,auto);
+    grid-template-rows: repeat(100,auto);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    
+    gap: 10%;
 }
 
+.navbar ul li {
 
-
-nav button{
-
-    height: 60%;
-    width: 15%;
-    background: white;
-    border: none;
-    box-shadow: 2px 1px 10px black;
-    border-radius: 10px;
-    color: rgb(67, 67, 165);
-    font-family: 'Courier New', Courier, monospace;
+    width: 20%;
+    height:4vh;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-nav #toggle{
-
-    color: white;
-    height: 30%;
-    width: 10%;
-    font-size: 22px;
-    
-}
-
-a{
+.navbar ul li a{
     text-decoration: none;
-    color: rgb(67, 67, 165);
-}
-a:visited{
-
-    color:rgb(67, 67, 165) ;
+    font-size: 0.7rem;
+    font-family: sans-serif;
+    color: black;
 }
 
+.navbar ul li a:visited{
+
+    color: black;
+}
+.navbar ul li button{
+
+    height: 100%;
+    width: 50%;
+    background: rgb(115, 221, 115);
+    color: white;
+    border: none;
+    border-radius: 8%;
+    }
+
+    .navbar ul li button:hover{
+
+     box-shadow: 0.6px 0.8px 5px black;
+        }
+
+#root{
+
+    width:30%;
+    height: 60vh;
+    background:white;
+    box-shadow: 2px 1px 5px black;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    animation: 1.5s 1 ease-in;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+input[class = "inputFields"]{
+  
+    width:55%;
+    height:3vh;
+    border:solid black 0.8px;
+    border-radius:7px;
+}
+
+button[id = "submitBtn"]{
+
+    width:25%;
+    height: 3vh;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+.displayPanel{
+    width: 50%;
+    min-height: 60vh;
+    background: rgb(250, 250, 250);
+    border-radius: 10px;
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
 
 
