@@ -1,45 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <title>Book library</title>
+    <title>Library</title>
 </head>
 <body>
-    <nav>
-        
-        <button> <a href="#" id="addBtn">Add New Boook</a> </button>
-        <ion-icon name="filter-outline" id="toggle"></ion-icon>
-    </nav>
-    <div class="form" id="form">
-        <label for="author">Author:</label>
-        <div type="text" id="author"></div>
+     <div class="navbar">
+        <div class="logo" id="logo"></div>
+        <ul>
+            <li><a href="#">View Books</a></li>
+            <li><a href="#">Manage</a></li>
+            <li><button type="button" id="addBtn" onclick="showEverything()">ADD</button></li>
+        </ul>
 
-        <label for="title">Title:</label>
-        <div type="text" id="title"></div>
-        
-        <label for="pages">Pages:</label>
-        <div type="text" id="pages"> </div>
-        
-        <label for="select">have you read the book?</label>
-        <select name="" id="select">
-            <option value="true">true</option>
-            <option value="false">false</option>
-        </select>
-        <button><a href="#" id="confirmBtn"> Confirm Details </a></button>
-    </div>
+     </div>
+    <form class="root" id="root">
+         <input class="inputFields" id="author"  type="text" placeholder="author name..">
+         <input class="inputFields" id="title"  type="text" placeholder="Book Title..">
+         <input class="inputFields" id="pages" type="text" placeholder="Pages..">
+         <button type="button" id="submitBtn">Submit</button>
+    </form>
 
-       <div class="bookDisplay" id="bookDisplay">
-          
-       </div>
-    </div>
-
-   
     
-    <script src="script.js"></script>
+
+    <script src="populate.js"></script>
 </body>
 </html>
