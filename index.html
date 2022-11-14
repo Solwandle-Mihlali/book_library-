@@ -2,30 +2,32 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
 </head>
 <body>
-     <div class="navbar">
-        <div class="logo" id="logo"></div>
+    <nav class="sideNav" id="sideNav">
         <ul>
-            <li><a href="#">View Books</a></li>
-            <li><a href="#">Manage</a></li>
-            <li><button type="button" id="addBtn" onclick="showEverything()">ADD</button></li>
+            <li><a href="#"><ion-icon name="folder-open-outline"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="call-outline"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="chatbubbles-outline"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="calendar-number-outline"></ion-icon></a></li>
         </ul>
+    </nav>
 
-     </div>
-    <form class="root" id="root">
-         <input class="inputFields" id="author"  type="text" placeholder="author name..">
-         <input class="inputFields" id="title"  type="text" placeholder="Book Title..">
-         <input class="inputFields" id="pages" type="text" placeholder="Pages..">
-         <button type="button" id="submitBtn">Submit</button>
+    <form action="#" id="Container">
+      <input type="text" placeholder="Author..." class="input">
+      <input type="text" placeholder="Title..." class="input">
+      <input type="text" placeholder="Pages.." class="input">
+      <button type="button">Submit</button>
     </form>
-
     
 
-    <script src="populate.js"></script>
+    <script src="stylingScript.js"></script>
+    <script src="logicScript.js"></script>
 </body>
 </html>
