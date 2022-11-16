@@ -10,6 +10,7 @@
     <title>Library</title>
 </head>
 <body>
+    
     <nav class="sideNav" id="sideNav">
         <ul>
             <li><a href="#"><ion-icon name="folder-open-outline"></ion-icon></a></li>
@@ -20,12 +21,11 @@
     </nav>
 
     <form action="#" id="Container">
-      <input type="text" placeholder="Author..." class="input">
-      <input type="text" placeholder="Title..." class="input">
-      <input type="text" placeholder="Pages.." class="input">
-      <button type="button">Submit</button>
+      <input type="text" placeholder="Author..." class="input" id="authorInput">
+      <input type="text" placeholder="Title..." class="input" id="title">
+      <input type="text" placeholder="Pages.." class="input" id="pages">
+      <button type="button" onclick="onClick()">Submit</button>
     </form>
-    
 
     <script src="stylingScript.js"></script>
     <script src="logicScript.js"></script>
